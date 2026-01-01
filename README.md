@@ -5,4 +5,4 @@ ROLL NO. - 25116106
 ### Home page 
 ![Home page SS](portfolio.png) 
 ### About page 
-![About page SS](aboutme.png)
+![About me page SS](aboutme.png)
