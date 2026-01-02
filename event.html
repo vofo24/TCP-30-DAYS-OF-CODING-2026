@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule & Registration</title>
+</head>
+
+<body>
+    <h1>
+        Community Tech Event - 2026
+    </h1>
+    <section>
+        <h2>
+            Event Schedule Day - 1
+        </h2>
+        <table bgcolor="black" border="0" width="100%">
+
+            <tr bgcolor="#D3D3D3">
+                <th>Time</th>
+                <th>Event</th>
+                <th>Location</th>
+            </tr>
+
+            <tbody bgcolor="#F5F5F5" align="center">
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td>Registration & Coffee</td>
+                    <td>Main Hall</td>
+                </tr>
+                <tr>
+                    <td>10:15 - 11:45</td>
+                    <td>Keynote: The Future of Web</td>
+                    <td>Auditorium</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 13:00</td>
+                    <td>Hands-on Workshops</td>
+                    <td>Room A</td>
+                </tr>
+                <tr>
+                    <td>
+                        13:30 - 14:30
+                    </td>
+                    <td>
+                        Closing Ceremony
+                    </td>
+                    <td>
+                        Front Auditorium
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <section>
+        <h2>Registration Form</h2>
+        <p>Registration is open until the event begins. Please bring your ID and a valid email address.</p>
+        <form method="post" action="submit_registration.php">
+            <label for="full-name">Full name:</label><br>
+            <input type="text" id="full-name" name="full_name" required placeholder="xyz"><br><br>
+
+            <label for="email">Email address:</label><br>
+            <input type="email" id="email" name="email" required placeholder="spam@gmail.com"><br><br>
+
+            <label for="phone">Phone number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10"><br><br>
+
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="0"><br><br>
+
+            <label for="date">Preferred date:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+
+
+            <fieldset>
+                <legend>Ticket Type</legend>
+                <input type="radio" id="ticket-standard" name="ticket_type" value="standard" checked>
+                <label for="ticket-standard">Standard</label><br>
+                <input type="radio" id="ticket-vip" name="ticket_type" value="vip">
+                <label for="ticket-vip">VIP</label><br>
+                <input type="radio" id="ticket-student" name="ticket_type" value="student">
+                <label for="ticket-student">Student</label>
+            </fieldset>
+            <br><br> 
+
+            <fieldset>
+                <legend>Workshop Preferences (select any)</legend>
+                <input type="checkbox" id="ws-web" name="workshops[]" value="web">
+                <label for="ws-web">Web Development</label><br>
+                <input type="checkbox" id="ws-data" name="workshops[]" value="data">
+                <label for="ws-data">Data Science</label><br>
+                <input type="checkbox" id="ws-design" name="workshops[]" value="design">
+                <label for="ws-design">Design &amp; UX</label>
+            </fieldset>
+            <br><br>
+
+            <label for="comments">Additional comments</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"
+                placeholder="Any accessibility needs or questions"></textarea><br><br>
+
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset</button>
+
+
+    </section>
+</body>
+
+</html>
