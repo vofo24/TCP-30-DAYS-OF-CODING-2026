@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Vedanshu Nishad</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>Vedanshu Nishad</h1>
-        <nav>
+        <nav class="site-nav">
 
-            <a href="about.html" target="_blank"> About Me</a>
+            <a href="about.html" target="_blank">About Me</a>
 
         </nav>
     </header>
@@ -25,19 +26,24 @@
                 My goal is to build impactful tech solutions and grow as a skilled engineer.
             </p>
         </section>
-        <section>
-            <h2> Profile</h2>
-            <img src="vedanshu.jpg" alt="Vedanshu Nishad" width="250">
+        <section class="profile-section">
+            <h2>Profile</h2>
+            <div class="profile-container" tabindex="0">
+                <img src="vedanshu.jpg" alt="Vedanshu Nishad" class="profile-pic">
+            </div>
+            <div class="btn-group" style="margin-top:12px; display:flex; gap:8px;">
+                <a href="#contact" class="btn">Contact</a>
+                <a href="#projects" class="btn btn--outline">View Projects</a>
+            </div>
         </section>
-        <section>
-            <h2>
-                Skills
-            </h2>
-            <ul>
+        <section class="skills-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
                 <li>Programming Languages: C++</li>
                 <li>Web Development: HTML, CSS</li>
                 <li>Prompt Engineering</li>
-                <li>Chatgpt </li>
+                <li>ChatGPT</li>
+            </ul>
         </section>
         <section>
             <h2> Projects </h2>
@@ -45,13 +51,13 @@
             <p> A personal website built using HTML to showcase skills, projects, and achievements. </p>
         </section>
         <section>
-            <h2>
-                Entertainment
-            </h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UiMg566PREA?si=3y-MuaSURf71x4dE"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Entertainment</h2>
+            <div class="video-wrapper">
+                <iframe class="responsive-video" src="https://www.youtube.com/embed/UiMg566PREA?si=3y-MuaSURf71x4dE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
         <section>
             <h2> Quote </h2>
