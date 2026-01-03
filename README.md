@@ -9,3 +9,9 @@ ROLL NO. - 25116106
 
 ### EVENT 
 [tableandforms](tableandforms.png)
+
+### HOME AFTER CSS
+[home2](home2.png)
+
+### ABOUT AFTER CSS 
+[about2](about2.png)
