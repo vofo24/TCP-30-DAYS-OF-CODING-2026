@@ -15,3 +15,6 @@ ROLL NO. - 25116106
 
 ### ABOUT AFTER CSS 
 [about2](about2.png)
+
+### LANDING PAGE 
+[landingpage](landingpage.png)
