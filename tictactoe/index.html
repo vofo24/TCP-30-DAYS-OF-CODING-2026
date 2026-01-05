@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tic•Tac•Glow</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="stage">
+        <header class="site-header">
+            <div class="brand">
+                <img class="brand-vec" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/trello.svg"
+                    alt="logo" aria-hidden="true">
+                <h1>Tic•Tac•Glow</h1>
+            </div>
+            <div class="controls">
+                <button id="restart" class="btn">Restart</button>
+                <div class="turn">Turn: <span id="turnPlayer">X</span></div>
+            </div>
+        </header>
+
+        <section class="board-wrap">
+            <div id="board" class="board" role="grid" aria-label="Tic tac toe board">
+                <!-- 9 cells appended by JS -->
+            </div>
+        </section>
+
+        <div id="overlay" class="overlay" aria-hidden="true">
+            <div id="resultCard" class="result-card">
+                <div id="resultIcon" class="result-icon"></div>
+                <h2 id="resultText"></h2>
+                <button id="overlayRestart" class="btn">Play again</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

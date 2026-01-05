@@ -1,0 +1,59 @@
+/* index.css - Tic•Tac•Glow styles */
+:root{
+  --bg: linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+  --card: #0f1728;
+  --accent-x: #00e0a3;
+  --accent-o: #7c5cff;
+  --muted: #98a0b3;
+  --glass: rgba(255,255,255,0.04);
+  --radius: 14px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:Inter,system-ui,Arial; background:var(--bg); color:#e6eef8; -webkit-font-smoothing:antialiased; display:flex; align-items:center; justify-content:center; padding:28px;
+}
+.stage{ width:100%; max-width:720px }
+.site-header{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px }
+.brand{ display:flex; align-items:center; gap:12px }
+.brand h1{ font-family:'Poppins',Inter,system-ui; font-weight:800; margin:0; letter-spacing:-0.02em }
+.brand-vec{ width:36px; height:36px; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.5)); border-radius:8px; background:#fff; padding:6px }
+.controls{ display:flex; align-items:center; gap:12px }
+.turn{ color:var(--muted); font-weight:600 }
+
+.btn{ background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border:0; color:inherit; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:700; backdrop-filter: blur(6px); transition: transform .18s ease, box-shadow .18s ease }
+.btn:hover{ transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.5) }
+
+.board-wrap{ display:flex; justify-content:center }
+.board{ display:grid; grid-template-columns: repeat(3, 120px); grid-template-rows: repeat(3, 120px); gap:14px; padding:18px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:20px; box-shadow: 0 18px 60px rgba(2,6,23,0.6); }
+.cell{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:44px; font-weight:800; cursor:pointer; color:var(--muted); user-select:none; transition: transform .14s ease, box-shadow .14s ease, color .12s ease }
+.cell:hover{ transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 48px rgba(2,6,23,0.6) }
+.cell.x{ color:var(--accent-x); text-shadow: 0 8px 30px rgba(0,224,163,0.12) }
+.cell.o{ color:var(--accent-o); text-shadow: 0 8px 30px rgba(124,92,255,0.12) }
+
+.cell.win{ transform: scale(1.08); box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 36px rgba(255,255,255,0.03) }
+
+/* Overlay result card */
+.overlay{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55)); }
+.overlay.show{ display:flex }
+.result-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:16px; padding:28px; text-align:center; width:320px; box-shadow: 0 34px 90px rgba(2,6,23,0.7); }
+.result-icon{ height:88px; display:flex; align-items:center; justify-content:center; margin-bottom:6px }
+.result-icon svg{ width:88px; height:88px }
+.result-card h2{ margin:6px 0 14px }
+
+/* Win animation (confetti canvas simulated with JS elements) */
+.confetti{ position:fixed; pointer-events:none; z-index:9999 }
+
+/* Lose animation: board shake */
+.board.shake{ animation: boardShake .6s cubic-bezier(.36,.07,.19,.97) }
+@keyframes boardShake{ 10%, 90% { transform: translateX(-1px) } 20%, 80% { transform: translateX(2px) } 30%, 50%, 70% { transform: translateX(-4px) } 40%, 60% { transform: translateX(4px) } }
+
+/* Draw pulse */
+.result-card.draw{ animation: popIn .6s cubic-bezier(.2,.9,.2,1) }
+@keyframes popIn{ from{ transform: scale(.92); opacity:0 } to{ transform: scale(1); opacity:1 } }
+
+/* Responsive */
+@media (max-width:480px){
+  .board{ grid-template-columns: repeat(3, 88px); grid-template-rows: repeat(3,88px); gap:10px }
+  .cell{ font-size:34px }
+}
